@@ -3,6 +3,7 @@ import { Route, Switch, useHistory } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
 import Dashboard from '../pages/Dashboard'
 import User from '../pages/User'
+import ContactUs from '../pages/ContactUs'
 
 export default function Main() {
   const history = useHistory()
@@ -24,6 +25,9 @@ export default function Main() {
             </Route>
             <Route path='/users'>
               <User />
+            </Route>
+            <Route path='/contact-us'>
+              <ContactUs />
             </Route>
           </Switch>
         </div>

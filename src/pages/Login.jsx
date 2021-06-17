@@ -98,7 +98,7 @@ function Login() {
         <div className="w-full h-screen bg-gray-700 sm:w-11/12 sm:h-5/6 flex items-center shadow-2xl sm:rounded-3xl">
           <div className="w-2/5 sm:w-3/5 h-full flex-row justify-center items-center">
             <div className="flex w-full h-full justify-center items-center">
-              <img src={BannerLogo} className="w-2/3 h-2/3"/>
+              <img src={BannerLogo} className="w-2/3 h-2/3" alt="banner"/>
             </div>
           </div>
           <div className="w-3/5 sm:w-2/5 h-full bg-blue-50 flex justify-center items-center sm:rounded-r-3xl flex-wrap">

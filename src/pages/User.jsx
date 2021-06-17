@@ -93,29 +93,29 @@ export default function User() {
         </div>
       </div>
       <div className="mt-10">
-        <div className="w-1/4 mb-5">
+        <div className="w-1/4 mb-4">
           <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="search" type="text" placeholder="Search user here..."
             name="keyword"
             value={input.keyword}
             onChange={handleSearch}
           />
         </div>
-        <table className="min-w-full leading-normal">
+        <table className="min-w-full shadow leading-normal">
           <thead>
             <tr>
-              <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+              <th scope="col" className="px-5 py-5 bg-white  border-b border-gray-200 text-gray-800  text-left font-bold text-sm uppercase font-normal">
                 User
               </th>
-              <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+              <th scope="col" className="px-5 py-5 bg-white  border-b border-gray-200 text-gray-800  text-left font-bold text-sm uppercase font-normal">
                 Gender
               </th>
-              <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+              <th scope="col" className="px-5 py-5 bg-white  border-b border-gray-200 text-gray-800  text-left font-bold text-sm uppercase font-normal">
                 Email
               </th>
-              <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+              <th scope="col" className="px-5 py-5 bg-white  border-b border-gray-200 text-gray-800  text-left font-bold text-sm uppercase font-normal">
                 Phone
               </th>
-              <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
+              <th scope="col" className="px-5 py-5 bg-white  border-b border-gray-200 text-gray-800  text-left font-bold text-sm uppercase font-normal">
                 Location
               </th>
             </tr>
@@ -136,37 +136,37 @@ export default function User() {
           <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-end">
             <div>
               <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                <a href="#" className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-blue-100"
+                <p className="relative cursor-pointer inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-blue-100"
                   onClick={() => decrementPage()}
                 >
                   <span className="sr-only">Previous</span>
                   <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                </a>
+                </p>
                 {
                   totalPage.map((page,idx) => {
                     return (
-                      <a key={idx} href="#" className={
+                      <p key={idx} className={
                         currentPage === page ? (
-                          "bg-gray-300 border-gray-300 text-gray-800 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                        ) : "bg-white border-gray-300 text-gray-800 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                          "bg-gray-300 cursor-pointer border-gray-300 text-gray-800 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                        ) : "bg-white cursor-pointer border-gray-300 text-gray-800 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
                       }
                         onClick={() => handleClickPage(page)}
                       >
                         { page }
-                      </a>
+                      </p>
                     )
                   })
                 }
-                <a href="#" className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-blue-100"
+                <p className="relative cursor-pointer inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-blue-100"
                   onClick={() => incrementPage()}
                 >
                   <span className="sr-only">Next</span>
                   <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                   </svg>
-                </a>
+                </p>
               </nav>
             </div>
           </div>
