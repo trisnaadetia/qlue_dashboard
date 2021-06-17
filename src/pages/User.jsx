@@ -76,7 +76,13 @@ export default function User() {
     setInput({
       ...input, [e.target.name]: value
     })
-    const filter = newListUser.filter(user => user.firstName.toLowerCase() === value)
+    const filter = newListUser.filter(user => {
+      return (
+        `${user.name.first.toLowerCase()} ${user.name.last.toLowerCase()}` === value.toLowerCase() ||
+        user.name.first.toLowerCase() === value.toLowerCase()
+      )
+    })
+    value ? dispatch(setFilterUser(filter)) : dispatch(fetchUser(firstIndexPage, lastIndexPage))
   }
 
   return (
@@ -116,7 +122,7 @@ export default function User() {
           </thead>
           <tbody>
             {
-              listUser.length ? userPerPage.map((user,idx) => <TableData key={idx} user={user}/>) : (
+              userPerPage.length ? userPerPage.map((user,idx) => <TableData key={idx} user={user}/>) : (
                 <tr>
                   <td colSpan="5" className="px-5 py-5 text-center border-b border-gray-200 bg-white text-sm">
                     No match data

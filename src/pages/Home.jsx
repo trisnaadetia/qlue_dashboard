@@ -13,21 +13,21 @@ export default function Main() {
     }
   }, [])
 
-    return (
-      <div className="flex h-screen bg-gray-800">
-        <Sidebar />
-        <div className="flex-1 px-12 py-6">
-          <div className="bg-blue-100 h-full w-full rounded-3xl p-10 overflow-auto">
-            <Switch>
-              <Route exact path='/'>
-                <Dashboard />
-              </Route>
-              <Route path='/users'>
-                <User />
-              </Route>
-            </Switch>
-          </div>
+  return (
+    <div className="flex h-screen bg-gray-800">
+      <Sidebar />
+      <div className="flex-1 px-12 py-6">
+        <div className="bg-blue-100 h-full w-full rounded-3xl p-10 overflow-auto">
+          <Switch>
+            <Route exact path='/'>
+              <Dashboard />
+            </Route>
+            <Route path='/users'>
+              <User />
+            </Route>
+          </Switch>
         </div>
       </div>
-    )
+    </div>
+  )
 }

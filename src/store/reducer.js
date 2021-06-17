@@ -21,7 +21,7 @@ function setListUser(state = initialState, action) {
     case SET_USER_PER_PAGE:
       return { ...state, userPerPage: payload }
     case SET_FILTER_USER:
-      return { ...state, userData: payload }
+      return { ...state, userPerPage: payload }
     case SET_LIST_USER_LOADING:
       return { ...state, loading: payload }
     case SET_LIST_USER_ERROR:

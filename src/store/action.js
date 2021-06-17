@@ -14,8 +14,8 @@ export function fetchUser(firstIndexPage, lastIndexPage) {
       url: `https://60cafe0521337e0017e43791.mockapi.io/qlue/users`
     })
       .then(({ data }) => {
-        dispatch(setListUser(data.results))
-        dispatch(setUserPerPage(data.results.slice(firstIndexPage, lastIndexPage)))
+        dispatch(setListUser(data))
+        dispatch(setUserPerPage(data.slice(firstIndexPage, lastIndexPage)))
       })
       .catch(err => dispatch(setListUserError(err)))
       .finally(() => dispatch(setListUserLoading(false)))
