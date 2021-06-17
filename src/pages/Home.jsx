@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
+import Dashboard from '../pages/Dashboard'
+import User from '../pages/User'
 
 export default function Main() {
   const history = useHistory()
 
   useEffect(() => {
     if(!localStorage.access_token) {
-      history.push('/')
+      history.push('/login')
     }
   }, [])
 
@@ -16,11 +18,14 @@ export default function Main() {
         <Sidebar />
         <div className="flex-1 px-12 py-6">
           <div className="bg-blue-100 h-full w-full rounded-3xl p-10 overflow-auto">
-            {/* <Switch>
+            <Switch>
               <Route exact path='/'>
                 <Dashboard />
               </Route>
-            </Switch> */}
+              <Route path='/users'>
+                <User />
+              </Route>
+            </Switch>
           </div>
         </div>
       </div>

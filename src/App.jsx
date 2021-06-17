@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom"
 import Login from './pages/Login'
 import Home from './pages/Home'
@@ -12,10 +11,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route path="/login">
           <Login />
         </Route>
-        <Route path="/home">
+        <Route path="/">
           <Home />
         </Route>
       </Switch>

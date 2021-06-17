@@ -54,7 +54,7 @@ function Login() {
         .then(({ data }) => {
           localStorage.setItem('access_token', data.token.access_token)
           successAlert()
-          history.push('/home')
+          history.push('/')
         })
         .catch(({response}) => {
           console.log(response)
