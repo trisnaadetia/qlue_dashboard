@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import axios from 'axios'
 import BannerLogo from '../assets/img/banner.svg'
+import Logo from '../assets/img/qlue.png'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Swal from 'sweetalert2'
@@ -105,7 +106,10 @@ function Login() {
             <form className="w-3/4"
               onSubmit={submitFormLogin}
             >
-              <h1 className="text-3xl text-black text-center mb-10 font-mono font-bold mb-5">
+              <div className="mb-10 flex justify-center items-center">
+                <img src={Logo} className="w-40" alt='qlue' />
+              </div>
+              <h1 className="text-3xl text-black font-mono font-bold mb-5">
                 Login
               </h1>
               <div className="mb-4">

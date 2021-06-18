@@ -4,13 +4,13 @@ import {
   SET_LIST_USER_ERROR,
   SET_FILTER_USER,
   SET_USER_PER_PAGE
-} from './constanta'
+} from '../constanta'
 
 const initialState = {
   userData: [],
   userPerPage: [],
-  loading: true,
-  error: false
+  loadingUser: true,
+  errorUser: false
 }
 
 function setListUser(state = initialState, action) {
@@ -23,9 +23,9 @@ function setListUser(state = initialState, action) {
     case SET_FILTER_USER:
       return { ...state, userPerPage: payload }
     case SET_LIST_USER_LOADING:
-      return { ...state, loading: payload }
+      return { ...state, loadingUser: payload }
     case SET_LIST_USER_ERROR:
-      return { ...state, error: payload }
+      return { ...state, errorUser: payload }
     default:
       return state
   }

@@ -6,9 +6,9 @@ import LoadingPlaceholder from '../components/LoadingPlaceholder'
 
 export default function User() {
   const dispatch = useDispatch()
-  const userPerPage = useSelector(state => state.userPerPage)
-  const listUser = useSelector(state => state.userData)
-  const loading = useSelector(state => state.loading)
+  const userPerPage = useSelector(state => state.user.userPerPage)
+  const listUser = useSelector(state => state.user.userData)
+  const loading = useSelector(state => state.user.loadingUser)
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPage, setTotalPage] = useState([])
   const [lastIndexPage, setLastIndexPage] = useState(5)
