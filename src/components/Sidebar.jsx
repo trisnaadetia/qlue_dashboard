@@ -55,8 +55,8 @@ export default function Sidebar() {
               <p className="font-semibold text-xl">Users</p>
             </div>
           </div>
-          <div onClick={() => navigation.push('/contact-us')} className={
-            location.pathname === "/contact-us" ? (
+          <div onClick={() => navigation.push('/office')} className={
+            location.pathname === "/office" ? (
               "text-gray-100 bg-yellow-500 cursor-pointer rounded-r-2xl cursor-500 transition-colors duration-500"
             ) : (
               "text-gray-100 rounded-r-2xl cursor-pointer opacity-70 hover:opacity-100 transition duration-500"
@@ -66,7 +66,7 @@ export default function Sidebar() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
               </svg>
-              <p className="font-semibold text-xl">Contact Us</p>
+              <p className="font-semibold text-xl">Office</p>
             </div>
           </div>
           <div onClick={() => logout()} className="text-gray-100 rounded-r-2xl cursor-pointer opacity-70 hover:opacity-100 transition duration-500">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ContactUs() {
+function Office() {
   return (
     <div>
       <div className="flex">
@@ -31,4 +31,4 @@ function ContactUs() {
   )
 }
 
-export default ContactUs
+export default Office
